@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salão da Andréia | Beleza, Elegância e Cuidado</title>
+<meta name="description" content="Salão da Andréia — cortes, coloração, tratamentos capilares e penteados. Agende seu horário pelo WhatsApp e viva a experiência de se sentir linda.">
+
+<!-- ===== Fontes: serifada editorial para títulos + sans humanista para leitura ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Ícones (apenas para redes sociais e pequenos glifos) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =========================================================
+     1. CABEÇALHO / NAVEGAÇÃO FIXA
+========================================================= -->
+<header class="header" id="header">
+  <div class="header__inner container">
+
+    <a href="#inicio" class="logo">
+      <span class="logo__mark">A</span>
+      <span class="logo__text">Salão da <em>Andréia</em></span>
+    </a>
+
+    <!-- Menu de navegação (desktop) -->
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#inicio" class="nav__link">Início</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#galeria" class="nav__link">Galeria</a></li>
+        <li><a href="#servicos" class="nav__link">Serviços</a></li>
+        <li><a href="#localizacao" class="nav__link">Localização</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#agendar" class="btn btn--gold btn--sm header-cta">Agendar horário</a>
+
+      <!-- Botão hambúrguer (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu mobile deslizante -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__list">
+      <li><a href="#inicio" class="mobile-menu__link">Início</a></li>
+      <li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
+      <li><a href="#galeria" class="mobile-menu__link">Galeria</a></li>
+      <li><a href="#servicos" class="mobile-menu__link">Serviços</a></li>
+      <li><a href="#localizacao" class="mobile-menu__link">Localização</a></li>
+      <li><a href="#agendar" class="btn btn--gold mobile-menu__cta">Agendar horário</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- =========================================================
+       2. HERO / SEÇÃO INICIAL
+  ========================================================= -->
+  <section class="hero" id="inicio">
+    <div class="hero__blob" aria-hidden="true"></div>
+    <div class="hero__strands" aria-hidden="true">
+      <svg viewBox="0 0 600 800" preserveAspectRatio="none">
+        <path class="strand strand--1" d="M40,-40 C 140,120 -20,300 100,460 C 220,620 60,700 140,840" />
+        <path class="strand strand--2" d="M160,-40 C 260,160 100,320 220,480 C 340,640 180,720 260,860" />
+        <path class="strand strand--3" d="M280,-40 C 380,140 220,340 340,500 C 460,660 300,740 380,880" />
+      </svg>
+    </div>
+
+    <div class="container hero__inner">
+      <p class="eyebrow reveal">Cabelo &amp; estética em Indaiatuba</p>
+      <h1 class="hero__title reveal">
+        Sua beleza contada <span class="script">com elegância</span>
+      </h1>
+      <p class="hero__subtitle reveal">
+        Cortes, coloração e tratamentos pensados para valorizar quem você é.
+        No Salão da Andréia, cada detalhe do seu cabelo é tratado como uma obra de autor.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#agendar" class="btn btn--gold btn--lg">
+          <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
+        </a>
+        <a href="#servicos" class="btn btn--ghost btn--lg">Ver serviços</a>
+      </div>
+
+      <div class="hero__stats reveal">
+        <div class="stat">
+          <span class="stat__number">25+</span>
+          <span class="stat__label">anos de experiência</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number">3.000+</span>
+          <span class="stat__label">clientes atendidas</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__number">4.9★</span>
+          <span class="stat__label">avaliação média</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#sobre" class="scroll-cue" aria-label="Rolar para a próxima seção">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- Divisor decorativo em formato de fio de cabelo dourado (elemento assinatura) -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,30 C 150,0 300,60 450,30 C 600,0 750,60 900,30 C 1050,0 1150,45 1200,30" />
+    </svg>
+  </div>
+
+  <!-- =========================================================
+       3. SOBRE A ANDRéIA
+  ========================================================= -->
+  <section class="about" id="sobre">
+    <div class="container about__grid">
+
+      <div class="about__portrait reveal">
+        <div class="portrait-frame">
+          <div class="portrait-frame__photo">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <span class="portrait-frame__badge">Desde 2012</span>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="eyebrow reveal">Quem cuida do seu cabelo</p>
+        <h2 class="section-title reveal">Andréia Regina Zerbine</h2>
+        <p class="about__quote reveal">
+          <i class="fa-solid fa-quote-left"></i>
+          Cabelo é identidade — e meu trabalho é ajudar cada cliente a se enxergar
+          na própria imagem.
+        </p>
+        <p class="about__text reveal">
+          Formada e especializada, Andréia construiu o salão
+          com um propósito simples: transformar um corte de cabelo em um momento de
+          cuidado real. O espaço foi pensado nos mínimos detalhes onde o cliente se sente em casa.
+        </p>
+
+        <ul class="about__list reveal">
+          <li><i class="fa-solid fa-check"></i> Atendimento personalizado e sem pressa</li>
+          <li><i class="fa-solid fa-check"></i> Produtos profissionais de alta performance</li>
+          <li><i class="fa-solid fa-check"></i> Ambiente acolhedor</li>
+        </ul>
+
+        <a href="#galeria" class="btn btn--outline-gold reveal">Conhecer o espaço</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. GALERIA — ABAS COM FOTOS DO ESPAÇO
+  ========================================================= -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <p class="eyebrow reveal">Conheça o espaço</p>
+      <h2 class="section-title reveal">Um ambiente pensado para você</h2>
+      <p class="section-subtitle section-subtitle--dark reveal">
+        Navegue pelas abas abaixo e veja um pouco de cada cantinho do salão.
+      </p>
+
+      <!-- Abas de navegação da galeria -->
+      <div class="gallery__tabs reveal" role="tablist" aria-label="Categorias de fotos do espaço">
+        <button class="gallery__tab is-active" data-tab="recepcao" role="tab" aria-selected="true">Recepção</button>
+        <button class="gallery__tab" data-tab="estacoes" role="tab" aria-selected="false">Estações de corte</button>
+        <button class="gallery__tab" data-tab="lavatorio" role="tab" aria-selected="false">Lavatório &amp; Spa</button>
+        <button class="gallery__tab" data-tab="espera" role="tab" aria-selected="false">Área de espera</button>
+      </div>
+
+      <!-- Painéis de fotos — cada aba mostra um grupo de imagens do espaço -->
+      <div class="gallery__panels">
+
+        <div class="gallery__panel is-active" id="tab-recepcao">
+          <div class="gallery__grid">
+            <!-- Substitua o <div class="gallery-item__img"> por <img src="images/recepcao-1.jpg" alt="Recepção do salão"> quando tiver as fotos reais -->
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--1"><i class="fa-solid fa-store"></i></div>
+              <figcaption>Recepção &amp; boas-vindas</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--2"><i class="fa-solid fa-mug-hot"></i></div>
+              <figcaption>Cantinho do café</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--3"><i class="fa-solid fa-couch"></i></div>
+              <figcaption>Espaço de acolhimento</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="gallery__panel" id="tab-estacoes">
+          <div class="gallery__grid">
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--2"><i class="fa-solid fa-scissors"></i></div>
+              <figcaption>Estação de corte</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <figcaption>Estação de coloração</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--1"><i class="fa-solid fa-lightbulb"></i></div>
+              <figcaption>Iluminação profissional</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="gallery__panel" id="tab-lavatorio">
+          <div class="gallery__grid">
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--3"><i class="fa-solid fa-shower"></i></div>
+              <figcaption>Lavatório reclinável</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--4"><i class="fa-solid fa-spa"></i></div>
+              <figcaption>Sala de tratamentos</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--2"><i class="fa-solid fa-droplet"></i></div>
+              <figcaption>Produtos profissionais</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="gallery__panel" id="tab-espera">
+          <div class="gallery__grid">
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--1"><i class="fa-solid fa-mug-saucer"></i></div>
+              <figcaption>Área de espera</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--4"><i class="fa-solid fa-wifi"></i></div>
+              <figcaption>Conforto para acompanhantes</figcaption>
+            </figure>
+            <figure class="gallery-item reveal">
+              <div class="gallery-item__img gallery-item__img--3"><i class="fa-solid fa-star"></i></div>
+              <figcaption>Detalhes que fazem a diferença</figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. SERVIÇOS E PREÇOS
+  ========================================================= -->
+  <section class="pricing" id="servicos">
+    <div class="container">
+      <p class="eyebrow eyebrow--light reveal">Tabela de serviços</p>
+      <h2 class="section-title section-title--light reveal">Cuidados feitos sob medida</h2>
+      <p class="section-subtitle reveal">
+        Valores de referência — o orçamento final pode variar conforme o comprimento e
+        estado do cabelo. Fale com a gente para um diagnóstico gratuito.
+      </p>
+
+      <div class="pricing__grid">
+
+        <article class="price-card reveal">
+          <div class="price-card__icon"><i class="fa-solid fa-scissors"></i></div>
+          <h3 class="price-card__title">Corte Feminino</h3>
+          <p class="price-card__desc">Corte personalizado com finalização inclusa.</p>
+          <span class="price-card__value">R$ 80</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="price-card reveal">
+          <div class="price-card__icon"><i class="fa-solid fa-user"></i></div>
+          <h3 class="price-card__title">Corte Masculino</h3>
+          <p class="price-card__desc">Corte moderno com acabamento na navalha.</p>
+          <span class="price-card__value">R$ 45</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="price-card price-card--featured reveal">
+          <span class="price-card__tag">Mais procurado</span>
+          <div class="price-card__icon"><i class="fa-solid fa-droplet"></i></div>
+          <h3 class="price-card__title">Coloração</h3>
+          <p class="price-card__desc">Cobertura de brancos ou mudança de cor com proteção.</p>
+          <span class="price-card__value">R$ 150</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="price-card reveal">
+          <div class="price-card__icon"><i class="fa-solid fa-wind"></i></div>
+          <h3 class="price-card__title">Escova Modelada</h3>
+          <p class="price-card__desc">Escova com efeito liso ou volumoso, à sua escolha.</p>
+          <span class="price-card__value">R$ 60</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="price-card reveal">
+          <div class="price-card__icon"><i class="fa-solid fa-sun"></i></div>
+          <h3 class="price-card__title">Mechas &amp; Luzes</h3>
+          <p class="price-card__desc">Técnicas de iluminação em fita, balayage ou papel.</p>
+          <span class="price-card__value">R$ 220</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="price-card reveal">
+          <div class="price-card__icon"><i class="fa-solid fa-spa"></i></div>
+          <h3 class="price-card__title">Hidratação Profunda</h3>
+          <p class="price-card__desc">Reconstrução capilar com ativos nutritivos.</p>
+          <span class="price-card__value">R$ 70</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="price-card reveal">
+          <div class="price-card__icon"><i class="fa-solid fa-water"></i></div>
+          <h3 class="price-card__title">Progressiva</h3>
+          <p class="price-card__desc">Alinhamento e redução de volume duradouros.</p>
+          <span class="price-card__value">R$ 250</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+        <article class="price-card reveal">
+          <div class="price-card__icon"><i class="fa-solid fa-crown"></i></div>
+          <h3 class="price-card__title">Penteado de Festa</h3>
+          <p class="price-card__desc">Penteados para eventos, com direito a teste prévio.</p>
+          <span class="price-card__value">R$ 120</span>
+          <a href="#agendar" class="price-card__cta">Agendar <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. LOCALIZAÇÃO & CONTATO
+  ========================================================= -->
+  <section class="location" id="localizacao">
+    <div class="container location__grid">
+
+      <div class="location__info reveal">
+        <p class="eyebrow">Onde estamos</p>
+        <h2 class="section-title">Venha nos visitar</h2>
+        <p class="location__text">
+          Estamos na Cidade Nova I, em Indaiatuba, em um espaço pensado para o seu
+          conforto do início ao fim do atendimento.
+        </p>
+
+        <ul class="info-list">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Endereço</strong>
+              <span>R. dos Andradas, 326 — Cidade Nova I</span>
+              <span>Indaiatuba/SP, 13334-020</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Horário de atendimento</strong>
+              <span>Terça a sexta: 08:30 às 18:00</span>
+              <span>Sábado: 07:00 às 12:00</span>
+              <span>Domingo e Segunda: Fechado</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>(19) 99653-6276</span>
+            </div>
+          </li>
+        </ul>
+
+        <a href="#agendar" class="btn btn--gold">Falar com a gente</a>
+      </div>
+
+      <div class="location__map reveal">
+        <div class="map-frame">
+          <iframe
+            title="Mapa de localização do Salão da Andréia"
+            src="https://www.google.com/maps?q=R.+dos+Andradas,+326+-+Cidade+Nova+I,+Indaiatuba+-+SP,+13334-020&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. CHAMADA FINAL / AGENDAMENTO
+  ========================================================= -->
+  <section class="cta-final" id="agendar">
+    <div class="container cta-final__inner reveal">
+      <h2 class="cta-final__title">Pronta para renovar o visual?</h2>
+      <p class="cta-final__text">
+        Clique no botão abaixo e fale direto com a Andréia pelo WhatsApp para escolher
+        o melhor horário para você.
+      </p>
+      <button class="btn btn--gold btn--lg" id="whatsappBtn">
+        <i class="fa-brands fa-whatsapp"></i> Agendar meu horário
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     RODAPÉ
+========================================================= -->
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer__brand">
+      <a href="#inicio" class="logo logo--footer">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">Salão da <em>Andréia</em></span>
+      </a>
+      <p>Beleza autoral, cuidado de verdade.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegação</h4>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#localizacao">Localização</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <a href="tel:+551999653-6276"><i class="fa-solid fa-phone"></i> (19) 99653-6276</a>
+      <a href="#localizacao"><i class="fa-solid fa-location-dot"></i> R. dos Andradas, 326 — Indaiatuba/SP</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Redes sociais</h4>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <p>&copy; <span id="year"></span> Salão da Andréia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Botão flutuante de WhatsApp -->
+<a href="#" class="float-whatsapp" id="floatWhatsapp" aria-label="Agendar pelo WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
