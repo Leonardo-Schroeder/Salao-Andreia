@@ -762,6 +762,30 @@ a:focus-visible, button:focus-visible {
   z-index: 900;
   animation: floatPulse 2.6s ease-in-out infinite;
 }
+
+.section-subtitle2 {
+  margin-top: 64px; 
+  margin-bottom: 0;
+  text-align: center; 
+  color: rgba(251, 247, 241, 0.9);
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: max-content;
+  margin-inline: auto; 
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.04); /* Fundo semi-transparente */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda bem suave */
+  border-radius: var(--radius-lg); /* Bordas arredondadas do seu tema */
+}
+
+@media (max-width: 720px) {
+  .section-subtitle2 {
+    margin-top: 48px;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+}
+
 @keyframes floatPulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.08); }
