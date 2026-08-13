@@ -925,3 +925,8 @@ a:focus-visible, button:focus-visible {
 .logo--footer .logo__img {
   max-height: 80px; 
 }
+
+.avaliation-container{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
