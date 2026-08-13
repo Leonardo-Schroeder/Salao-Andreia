@@ -402,6 +402,7 @@ a:focus-visible, button:focus-visible {
 
 /* ---------- 7. SOBRE ---------- */
 .about { padding: 110px 0; background: var(--cream); }
+
 .about__grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -447,6 +448,11 @@ a:focus-visible, button:focus-visible {
   padding: 12px 20px;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-gold);
+}
+
+/* Remove o espaçamento duplo quando há duas seções "Sobre" juntas */
+.about + .about {
+  padding-top: 0;
 }
 
 .about__quote {
@@ -667,7 +673,22 @@ a:focus-visible, button:focus-visible {
   font-size: 1rem;
 }
 .info-list strong { display: block; color: var(--purple-900); margin-bottom: 4px; font-family: var(--font-display); font-weight: 600;}
-.info-list span { display: block; color: var(--ink-soft); font-size: 0.92rem; }
+
+/* Transforma as linhas de texto em flexbox para alinhar ícone e texto perfeitamente */
+.info-list span {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  margin-bottom: 6px; /* Dá um leve respiro entre as linhas de telefone */
+}
+
+/* Remove o formato de "bola grande" apenas dos ícones pequenos que estão junto ao texto */
+.info-list span i {
+  width: auto;
+  height: auto;
+  background: transparent;
+  display: inline-flex;
+}
 
 .map-frame {
   border-radius: var(--radius-lg);
@@ -763,7 +784,9 @@ a:focus-visible, button:focus-visible {
   animation: floatPulse 2.6s ease-in-out infinite;
 }
 
+/* Estilo do Subtítulo 2 transformado em botão fantasma */
 .section-subtitle2 {
+  display: block;
   margin-top: 64px; 
   margin-bottom: 0;
   text-align: center; 
@@ -773,16 +796,46 @@ a:focus-visible, button:focus-visible {
   max-width: max-content;
   margin-inline: auto; 
   padding: 16px 32px;
-  background: rgba(255, 255, 255, 0.04); /* Fundo semi-transparente */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda bem suave */
-  border-radius: var(--radius-lg); /* Bordas arredondadas do seu tema */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all var(--transition);
+  cursor: pointer;
 }
 
+.section-subtitle2:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+  transform: translateY(-4px);
+}
+
+/* Alinhamento dos botões na seção final */
+.cta-final__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* Responsividade extra */
 @media (max-width: 720px) {
   .section-subtitle2 {
     margin-top: 48px;
     font-size: 0.9rem;
     padding: 12px 24px;
+  }
+  
+  .cta-final__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cta-final__actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -844,10 +897,31 @@ a:focus-visible, button:focus-visible {
   .float-whatsapp { width: 52px; height: 52px; font-size: 1.4rem; bottom: 18px; right: 18px; }
 
   .section-subtitle { margin-bottom: 40px; }
+
+  .about + .about {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 420px) {
   .container { padding-inline: 18px; }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { justify-content: center; }
+}
+
+
+/* =========================================================
+   ESTILOS DA IMAGEM DO LOGO
+========================================================= */
+.logo__img {
+  max-width: 100%; /* Garante que a imagem nunca ultrapasse o limite da tela */
+  height: auto;    /* Mantém a proporção da imagem */
+  max-height: 60px; /* Define uma altura máxima para não desalinhar o menu (ajuste este valor conforme preferir) */
+  object-fit: contain;
+  display: block;
+}
+
+/* Caso queira o logo um pouco maior no rodapé (Opcional) */
+.logo--footer .logo__img {
+  max-height: 80px; 
 }
